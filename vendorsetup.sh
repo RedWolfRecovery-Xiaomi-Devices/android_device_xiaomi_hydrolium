@@ -1,0 +1,2 @@
+add_lunch_combo hydrolium-userdebug
+add_lunch_combo hydrolium-eng

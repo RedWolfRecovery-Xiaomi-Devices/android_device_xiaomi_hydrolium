@@ -1,0 +1,8 @@
+allow init kernel:system syslog_read;
+allow init kmsg_device:chr_file write;
+allow init logd_socket:sock_file write;
+allow init self:capability sys_nice;
+allow init functionfs:dir mounton;
+allow init self:netlink_audit_socket { create getopt nlmsg_write read write };
+allow init self:capability audit_control;
+
