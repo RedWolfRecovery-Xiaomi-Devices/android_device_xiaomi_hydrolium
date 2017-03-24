@@ -1,3 +1,0 @@
-allow tee block_device:dir getattr;
-allow tee init:unix_dgram_socket sendto;
-

@@ -28,8 +28,7 @@ PRODUCT_PACKAGES += \
 	charger
 
 PRODUCT_COPY_FILES += \
-    bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata \
-    device/xiaomi/hydrolium/strace/strace:recovery/root/sbin/strace
+    bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
 
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := hydrolium
