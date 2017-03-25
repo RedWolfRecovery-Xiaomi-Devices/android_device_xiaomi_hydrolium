@@ -11,7 +11,7 @@ Basic   | Spec Sheet
 CPU     | Quad-core 1.4 GHz Cortex-A53 & Dual-core 1.8 GHz Cortex-A72
 Chipset | Qualcomm MSM8956 Snapdragon 650
 GPU     | Adreno 510
-Memory  | 3GB DDR3 Dual-channel
+Memory  | 2/3GB DDR3 Dual-channel
 Storage | 16GB/32GB
 MicroSD | Up to 256GB
 Battery | Non-removable Li-Po 4850 mAh battery
