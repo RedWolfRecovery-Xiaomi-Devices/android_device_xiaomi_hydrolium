@@ -37,7 +37,7 @@
 #include "log.h"
 #include "util.h"
 
-#define RAW_ID_PATH     "/sys/devices/soc0/soc_id"
+#define SOC_ID_PATH     "/sys/devices/soc0/soc_id"
 #define BUF_SIZE         64
 static char tmp[BUF_SIZE];
 
@@ -50,7 +50,7 @@ static int read_file2(const char *fname, char *data, int max_size)
 
     fd = open(fname, O_RDONLY);
     if (fd < 0) {
-        ERROR("failed to open '%s'\n", fname);
+        ERROR("init_hydrolium: failed to open '%s'\n", fname);
         return 0;
     }
 
@@ -67,23 +67,26 @@ static int read_file2(const char *fname, char *data, int max_size)
 void vendor_load_properties()
 {
     int rc;
-    unsigned long raw_id = -1;
+    unsigned long soc_id = -1;
     const char *code_name = "hydrolium";
 
     /* get raw ID */
-    rc = read_file2(RAW_ID_PATH, tmp, sizeof(tmp));
+    rc = read_file2(SOC_ID_PATH, tmp, sizeof(tmp));
     if (rc) {
-        raw_id = strtoul(tmp, NULL, 0);
+        soc_id = strtoul(tmp, NULL, 0);
+    } else {
+        ERROR("init_hydrolium: failed to read soc_id\n");
     }
 
-    /* hydrogen */
-    if (raw_id == 266) {
+    if (soc_id == 266 /* hydrogen */) {
         code_name = "hydrogen";
-    }
-    /* helium */
-    else if (raw_id == 278) {
+    } else if (soc_id == 278 /* helium */) {
         code_name = "helium";
+    } else {
+        ERROR("init_hydrolium: unexpected soc_id = '%d'\n", soc_id);
     }
+
+    INFO("init_hydrolium: soc_id = '%d' => code_name = '%s'\n", soc_id, code_name);
     property_set("ro.product.device", code_name);
     property_set("ro.build.product", code_name);
 }
