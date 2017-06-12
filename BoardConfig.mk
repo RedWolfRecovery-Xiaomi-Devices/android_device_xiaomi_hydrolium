@@ -134,7 +134,7 @@ TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 #TWRP_INCLUDE_LOGCAT := true
 #TARGET_USES_LOGD := true
 
-#TW_USE_TOOLBOX := true
+TW_USE_TOOLBOX := false
 
 # For testing
 #TWRP_EVENT_LOGGING := true
