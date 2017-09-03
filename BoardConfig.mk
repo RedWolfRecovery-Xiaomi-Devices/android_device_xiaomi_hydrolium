@@ -126,6 +126,9 @@ TW_INCLUDE_CRYPTO := true
 TARGET_HW_DISK_ENCRYPTION := true
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
+# Exclude TWRP app
+TW_EXCLUDE_TWRPAPP := true
+
 # Use system vold for decryption
 #TW_CRYPTO_USE_SYSTEM_VOLD := qseecomd
 #TW_CRYPTO_SYSTEM_VOLD_DEBUG := true
