@@ -117,7 +117,6 @@ TW_INCLUDE_NTFS_3G := true
 TW_EXTRA_LANGUAGES := true
 
 # Vendor Init
-TARGET_UNIFIED_DEVICE       := true
 TARGET_INIT_VENDOR_LIB      := libinit_hydrolium
 TARGET_LIBINIT_DEFINES_FILE := $(DEVICE_TREE)/init/init_hydrolium
 
