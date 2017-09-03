@@ -106,7 +106,7 @@ TW_DEFAULT_EXTERNAL_STORAGE := true
 TW_IGNORE_MISC_WIPE_DATA := true
 
 # Device version
-TW_DEVICE_VERSION := 1
+TW_DEVICE_VERSION := 2
 
 # nijel8@xda BEGIN
 # Blacklist these "input" devices, use TW_INPUT_BLACKLIST := "accelerometer\x0atest1\x0atest2" using the \x0a as a separator between input devices
@@ -127,6 +127,9 @@ TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
 # Exclude TWRP app
 TW_EXCLUDE_TWRPAPP := true
+
+# Disable legacy setprop/getprop for flashing O
+TW_NO_LEGACY_PROPS := true
 
 # Use system vold for decryption
 #TW_CRYPTO_USE_SYSTEM_VOLD := qseecomd
