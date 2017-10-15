@@ -128,9 +128,6 @@ TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 # Exclude TWRP app
 TW_EXCLUDE_TWRPAPP := true
 
-# Disable legacy setprop/getprop for flashing O
-TW_NO_LEGACY_PROPS := true
-
 # Use system vold for decryption
 #TW_CRYPTO_USE_SYSTEM_VOLD := qseecomd
 #TW_CRYPTO_SYSTEM_VOLD_DEBUG := true
