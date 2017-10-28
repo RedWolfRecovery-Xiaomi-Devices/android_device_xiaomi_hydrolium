@@ -106,7 +106,7 @@ TW_DEFAULT_EXTERNAL_STORAGE := true
 TW_IGNORE_MISC_WIPE_DATA := true
 
 # Device version
-TW_DEVICE_VERSION := 2
+TW_DEVICE_VERSION := 3
 
 # nijel8@xda BEGIN
 # Blacklist these "input" devices, use TW_INPUT_BLACKLIST := "accelerometer\x0atest1\x0atest2" using the \x0a as a separator between input devices
