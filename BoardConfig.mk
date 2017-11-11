@@ -111,7 +111,7 @@ TW_DEVICE_VERSION := 3
 # nijel8@xda BEGIN
 # Blacklist these "input" devices, use TW_INPUT_BLACKLIST := "accelerometer\x0atest1\x0atest2" using the \x0a as a separator between input devices
 # Disable virtual mouse(hide mouse pointer)
-TW_INPUT_BLACKLIST := "hbtp_vm\x0ainput_mt_wrapper\x0apwm-ir"
+TW_INPUT_BLACKLIST := "pwm-ir"
 TW_EXCLUDE_SUPERSU := true
 TW_INCLUDE_NTFS_3G := true
 TW_EXTRA_LANGUAGES := true
