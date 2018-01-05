@@ -14,14 +14,18 @@
 # limitations under the License.
 #
 
-# Release name
-PRODUCT_RELEASE_NAME := hydrolium
-
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/cm/config/common.mk)
+
+# Device identifier. This must come after all inclusions
+PRODUCT_NAME := lineage_hydrolium
+PRODUCT_DEVICE := hydrolium
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_MODEL := Xiaomi Mi Max/Prime
 
 PRODUCT_PACKAGES += \
 	charger_res_images \
@@ -29,10 +33,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
-
-# Device identifier. This must come after all inclusions
-PRODUCT_NAME := hydrolium
-PRODUCT_DEVICE := hydrolium
-PRODUCT_BRAND := Xiaomi
-PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_MODEL := Xiaomi Mi Max/Prime

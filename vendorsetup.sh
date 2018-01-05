@@ -1,2 +1,1 @@
-add_lunch_combo hydrolium-userdebug
-add_lunch_combo hydrolium-eng
+add_lunch_combo lineage_hydrolium-eng
