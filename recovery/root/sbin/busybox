@@ -1,4 +1,0 @@
-#!/sbin/sh
-# workaround those lame scripts calling broken busybox
-
-/sbin/toybox "$@"

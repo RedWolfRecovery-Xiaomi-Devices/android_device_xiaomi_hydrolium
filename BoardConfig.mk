@@ -91,7 +91,7 @@ TW_DEFAULT_EXTERNAL_STORAGE := true
 TW_IGNORE_MISC_WIPE_DATA := true
 
 # Use toybox insted of busybox(broken)
-TW_USE_TOOLBOX := true
+#TW_USE_TOOLBOX := true
 
 # My device version
 TW_DEVICE_VERSION := 3
