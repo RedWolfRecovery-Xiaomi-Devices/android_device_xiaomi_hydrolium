@@ -36,4 +36,4 @@ Camera  | Primary: 16 MP, f/2.0, phase detection autofocus, dual-LED (dual tone)
 Camera  | Secondary: 5 MP, f/2.0, 1080p
 
 
-![Xiaomi Mi Max Prime](http://cdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-mi-max--1.jpg "Xiaomi Mi Max")
+![Xiaomi Mi Max/Mi Max Prime](http://cdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-mi-max--1.jpg "Xiaomi Mi Max/Mi Max Prime")

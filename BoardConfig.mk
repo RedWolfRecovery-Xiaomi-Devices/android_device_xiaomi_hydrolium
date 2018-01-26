@@ -25,8 +25,6 @@
 
 DEVICE_TREE := device/xiaomi/hydrolium
 
-USE_CLANG_PLATFORM_BUILD := true
-
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := MSM8952
@@ -90,10 +88,10 @@ TW_DEFAULT_BRIGHTNESS := 80
 TW_DEFAULT_EXTERNAL_STORAGE := true
 TW_IGNORE_MISC_WIPE_DATA := true
 
-# Use toybox insted of busybox(broken)
+# Use toybox insted of busybox
 #TW_USE_TOOLBOX := true
 
-# My device version
+# TWRP device specific version
 TW_DEVICE_VERSION := 3
 
 TW_INPUT_BLACKLIST := "pwm-ir"
