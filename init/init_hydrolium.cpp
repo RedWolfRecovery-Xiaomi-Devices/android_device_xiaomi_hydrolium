@@ -89,13 +89,16 @@ void vendor_load_properties()
     const char *soc_id_file = "/sys/devices/soc0/soc_id";
     std::string soc_id = "-1";
     std::string code_name = build_code_name;
+    std::string model = "Mi Max/Mi Max Prime";
 
     /* get raw SOC_ID */
     if (read_file(soc_id_file, &soc_id)) {
         if (Trim(soc_id) == "266" /* hydrogen */) {
             code_name = "hydrogen";
+            model = "Mi Max";
         } else if (Trim(soc_id) == "278" /* helium */) {
             code_name = "helium";
+            model = "Mi Max Prime";
         } else {
             ERROR("init_hydrolium: unexpected soc_id = '%s'\n", soc_id.c_str());
             return;
@@ -112,9 +115,14 @@ void vendor_load_properties()
     property_override("ro.build.product", code_name.c_str());
     property_override("ro.cm.device", code_name.c_str());
     property_override("ro.product.name", code_name.c_str());
+    property_override("ro.product.model", model.c_str());
     code_name_property_override("ro.build.fingerprint", code_name);
     code_name_property_override("ro.build.flavor", code_name);
     code_name_property_override("ro.build.description", code_name);
     code_name_property_override("ro.build.display.id", code_name);
+    code_name_property_override("ro.cm.display.version", code_name);
+    code_name_property_override("ro.cm.version", code_name);
+    code_name_property_override("ro.lineageoms.version", code_name);
+    code_name_property_override("ro.modversion", code_name);
 }
 
