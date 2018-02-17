@@ -5,8 +5,6 @@ on init
     chmod 0664 /dev/ion
     chown system system /dev/ion
 
-    chown root shell /sys/android_touch/doubletap2wake
-
 on early-fs
     start setup-decrypt
 
@@ -34,4 +32,4 @@ on boot
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor interactive
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor interactive
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor interactive
-	write /sys/android_touch/doubletap2wake 1
+    write /sys/devices/soc.0/78b8000.i2c/i2c-4/4-004a/wakeup_mode 1
