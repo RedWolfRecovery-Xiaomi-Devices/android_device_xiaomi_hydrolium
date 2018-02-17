@@ -91,9 +91,6 @@ TW_IGNORE_MISC_WIPE_DATA := true
 # Use toybox insted of busybox
 #TW_USE_TOOLBOX := true
 
-# TWRP device specific version
-TW_DEVICE_VERSION := 3
-
 TW_INPUT_BLACKLIST := "pwm-ir"
 TW_EXCLUDE_SUPERSU := true
 TW_INCLUDE_NTFS_3G := true
