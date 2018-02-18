@@ -48,20 +48,21 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8956
-TARGET_KERNEL_CONFIG := lineageos_hydrogen_defconfig
+#TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8956
+#TARGET_KERNEL_CONFIG := lineageos_hydrogen_defconfig
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-TARGET_KERNEL_APPEND_DTB := true
+#BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+#TARGET_KERNEL_APPEND_DTB := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+#TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk ramoops_memreserve=4M androidboot.selinux=permissive
+TARGET_PREBUILT_KERNEL := $(DEVICE_TREE)/Image.gz-dtb
 
 # Build custom recovery.img or ramdisk will not fit 2/16GB hydrogen
-BOARD_CUSTOM_BOOTIMG_MK := device/xiaomi/hydrolium/mkbootimg.mk
+#BOARD_CUSTOM_BOOTIMG_MK := device/xiaomi/hydrolium/mkbootimg.mk
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
@@ -110,3 +111,7 @@ TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
 # Exclude TWRP app
 TW_EXCLUDE_TWRPAPP := true
+
+# RedWolf flags
+TW_DEVICE_VERSION=026
+DEVICE_HAS_2GB_VARIANT=true
